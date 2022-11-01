@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="p-3 mortgage-heading">Calculation Summary</div>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Term</th>
+                        <th scope="col">Amortization Period</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Number of Payments</td>
+                        <td>{{numberOfPaymentsTerm || 0}}</td>
+                        <td>{{numberOfPaymentAmortization || 0}}</td>
+                    </tr>
+                    <tr>
+                        <td>Mortgage Payment</td>
+                        <td>{{calculatedAmount || 0 | currency:'USD'}}</td>
+                        <td>{{calculatedAmount || 0 | currency:'USD'}}</td>
+                    </tr>
+                    <tr>
+                        <td>Prepayment</td>
+                        <td>{{prepayment || 0 | currency:'USD'}}</td>
+                        <td>{{prepayment || 0| currency:'USD'}}</td>
+                    </tr>
+                    <tr>
+                        <td>Principal Payments</td>
+                        <td>{{calculationData?.mortgageAmount || 0| currency:'USD'}}</td>
+                        <td>{{calculationData?.mortgageAmount || 0| currency:'USD'}}</td>
+                    </tr>
+                    <tr>
+                        <td>Total Cost</td>
+                        <td>{{totalCost || 0 | currency:'USD'}}</td>
+                        <td>{{totalCostAmortizationPeriod || 0 | currency:'USD'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+</div>
